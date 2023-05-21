@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+p {
+  font-size: 32px;
+  margin-top: 0;
+  line-height: 1.1;
+  word-break: break-all;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #root {
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem 1rem 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body #root header {
+  padding: 1rem;
+}
+body #root header form {
+  margin-top: 3rem;
+  width: 100%;
+}
+body #root header form .flex {
+  display: flex;
+}
+body #root header form .flex .date {
+  min-width: 0;
+}
+body #root header form .flex .date h1, body #root header form .flex .date h2, body #root header form .flex .date h3 {
+  font-weight: 600;
+  color: hsl(0, 1%, 50%);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+body #root header form .flex .date input::-webkit-outer-spin-button,
+body #root header form .flex .date input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body #root header form .flex .date input {
+  width: 80%;
+  height: 2.5rem;
+  text-align: center;
+  border: 0.1rem solid hsl(0, 1%, 50%);
+  color: hsl(0, 0%, 8%);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+}
+body #root header form .flex .date input:focus {
+  border: none;
+  outline: 0.1rem solid hsl(259, 100%, 65%);
+}
+body #root header form .flex .correct h1, body #root header form .flex .correct h2, body #root header form .flex .correct h3 {
+  color: hsl(0, 100%, 67%);
+  position: relative;
+}
+body #root header form .flex .correct h1::after {
+  content: "Must be a valid day";
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.7rem;
+}
+body #root header form .flex .correct h2::after {
+  content: "Must be a valid month";
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.7rem;
+}
+body #root header form .flex .correct h3::after {
+  content: "Must be in the past";
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.7rem;
+}
+body #root header form .flex .correct input {
+  border: 0.1rem solid hsl(0, 100%, 67%);
+  position: relative;
+}
+body #root header form .flex .invalid {
+  /*
+  h1::after{
+      content: "This field is required";
+      position: absolute;
+      top: 4.5rem;
+      left: 0;
+      color: u.$light-red;
+      font-size: 0.7rem;
+  }
+  */
+}
+body #root header form .flex .invalid h1, body #root header form .flex .invalid h2, body #root header form .flex .invalid h3 {
+  color: hsl(0, 100%, 67%);
+  position: relative;
+}
+body #root header form .flex .invalid h1::after, body #root header form .flex .invalid h2::after, body #root header form .flex .invalid h3::after {
+  content: "This field is required";
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.7rem;
+}
+body #root header form .flex .invalid input {
+  border: 0.1rem solid hsl(0, 100%, 67%);
+  position: relative;
+}
+body #root header form .btn-div {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+body #root header form .btn-div .img-holder {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  cursor: pointer;
+}
+body #root header form .btn-div .img-holder img {
+  width: 50%;
+}
+body #root header form .btn-div .img-holder::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  top: 50%;
+  right: 5%;
+  background-color: hsl(0, 0%, 86%);
+  z-index: -1;
+}
+body #root header form .btn-div .img-holder:active {
+  background-color: hsl(0, 0%, 8%);
+}
+body #root main {
+  text-align: center;
+}
+body #root main .data {
+  margin: 1.5rem;
+}
+body #root main .data P {
+  line-height: 3rem;
+}
+body #root main .data P span {
+  color: hsl(259, 100%, 65%);
+  font-size: 3rem;
+}
+
+@media only screen and (min-width: 500px) {
+  body #root header form .btn-div .img-holder {
+    margin-left: 85%;
+  }
+}/*# sourceMappingURL=input.css.map */

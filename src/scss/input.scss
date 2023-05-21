@@ -1,0 +1,212 @@
+@forward 'global';
+@use "util" as u;
+
+
+
+body{
+    font-family: u.$font;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: u.$off-white;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    #root{
+        width: 90%;
+        background-color: u.$white;
+        border-radius: 1rem 1rem 4rem 1rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        header{
+            //display: flex;
+            padding: 1rem;
+            form{
+                margin-top: 3rem;
+                width: 100%;
+                .flex{
+                    display: flex;
+                    .date{
+                        min-width: 0;
+                        h1,h2,h3{
+                            font-weight: 600;
+                            color: u.$smoke-gray;
+                            font-size: 1.1rem;
+                            margin-bottom: 0.5rem;
+                        }
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                                 -webkit-appearance: none;
+                                 margin: 0;
+            }
+                        input{
+                            width: 80%;
+                            height: 2.5rem;
+                            text-align: center;
+                            border: 0.1rem solid u.$smoke-gray;
+                            color: u.$off-black;
+                            border-radius: 0.5rem;
+                            font-size: 1rem;
+                            font-weight: 900;
+                            
+                        }
+                        input:focus{
+                            border: none;
+                           outline: 0.1rem solid u.$purple;
+                        }
+                        //q:how to write psuedo invalid
+                        //input:invalid{
+                        //    border: 0.1rem solid u.$light-red;
+                       // }
+                        //
+                    }
+                    .correct{
+                        h1, h2, h3{
+                            color: u.$light-red;
+                            position: relative;
+                        }
+                        h1::after{
+                            content: "Must be a valid day";
+                                position: absolute;
+                                top: 4.5rem;
+                                left: 0;
+                                color: u.$light-red;
+                                font-size: 0.7rem;
+                        }
+                        h2::after{
+                            content: "Must be a valid month";
+                                position: absolute;
+                                top: 4.5rem;
+                                left: 0;
+                                color: u.$light-red;
+                                font-size: 0.7rem;
+                        }
+                        h3::after{
+                            content: "Must be in the past";
+                                position: absolute;
+                                top: 4.5rem;
+                                left: 0;
+                                color: u.$light-red;
+                                font-size: 0.7rem;
+                        }
+                        input{
+                            border: 0.1rem solid u.$light-red;
+                            //border: none;
+                            //outline: 0.1rem solid u.$light-red;
+                           position: relative;
+                         }
+                    }
+                    .invalid{
+
+                       h1, h2, h3{
+                            color: u.$light-red;
+                            position: relative;
+                            &::after{
+                                content: "This field is required";
+                                position: absolute;
+                                top: 4.5rem;
+                                left: 0;
+                                color: u.$light-red;
+                                font-size: 0.7rem;
+                            }
+                        }
+                        input{
+                           border: 0.1rem solid u.$light-red;
+                           //border: none;
+                           //outline: 0.1rem solid u.$light-red;
+                          position: relative;
+                        }
+
+                        /*
+                        h1::after{
+                            content: "This field is required";
+                            position: absolute;
+                            top: 4.5rem;
+                            left: 0;
+                            color: u.$light-red;
+                            font-size: 0.7rem;
+                        }
+                        */
+                        
+                    }
+    
+    
+                }
+                .btn-div{
+                    display: flex;
+                    position: relative;
+                    z-index: 1;
+                    margin: 0 auto;
+                    margin-top: 3rem;
+                    margin-bottom: 1rem;
+                    .img-holder{
+                        width: 4rem;
+                        height: 4rem;
+                        margin: 0 auto;
+                        border-radius: 50%;
+                        background-color: u.$purple;
+                        border: none;
+                        cursor: pointer;
+                        img{
+                            width: 50%;
+                            //height: 50%;
+                            //object-fit: cover;  
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 90%;
+                            height: 2px;
+                            top: 50%;
+                            right: 5%;
+                            background-color: u.$light-gray;
+                            z-index: -1;
+                            
+                        }
+                        &:active{
+                            background-color: u.$off-black;
+                            //opacity: 1;
+                        }
+                 }
+                }
+            }
+        }
+
+
+        main{
+            text-align: center;
+            .data{
+                margin: 1.5rem;
+                P{
+                    span{
+                        color: u.$purple;
+                        font-size: 3rem;
+                    }
+                    line-height: 3rem;
+                }
+            }
+                        
+            }
+
+    }
+    
+}
+@media only screen and (min-width: 500px) {
+  
+    body{
+        #root{
+            header{
+                form{
+                    .btn-div{
+                        .img-holder{
+                            margin-left: 85%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
