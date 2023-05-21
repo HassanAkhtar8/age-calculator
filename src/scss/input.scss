@@ -210,3 +210,18 @@ body{
         }
     }
 }
+@media only screen and (min-width: 750px){
+    body{
+        #root{
+            header{
+                form{
+                    .btn-div{
+                        .img-holder{
+                            margin-left: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
