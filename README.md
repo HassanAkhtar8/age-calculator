@@ -10,7 +10,7 @@
 
 
 ## Overview
-- This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+- The Age Calculator program takes the date of birth from three input fields (year, month, and day) and calculates the age in years, months, and days. It provides an easy way to determine precise age by considering the current date and accounting for factors like leap years and varying month lengths. The calculated age is displayed in a user-friendly format, aiding applications such as age verification and assessments.
 
 
 ### The challenge
@@ -47,5 +47,4 @@ Users should be able to:
 ## Author
 
 - Github - [Github Profile](https://github.com/HassanAkhtar8)
-- Frontend Mentor - [@HassanAkhtar8](https://www.frontendmentor.io/profile/HassanAkhtar8)
 
